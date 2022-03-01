@@ -28,10 +28,11 @@ body {
 }
 h1, h2, h3, p, blockquote{
     margin-bottom: 12px;
-    margin-right: 20px;
-    margin-left: 20px;
 }
-
+h1 {
+    font-size: 200%;
+    text-align: center;
+}
 header h2 {
     font-size: 300%;
     font-style: italic;
@@ -87,7 +88,7 @@ header h2 {
     list-style: none;
 }
 #nav_list ul li{
-    width: 90%;
+    width: 100%;
     margin: 0 auto 0.5em;
 }
 #nav_list ul li a{
@@ -149,24 +150,22 @@ header h2 {
 
 
 main{
-    padding: 0 1em;
+    padding: 0 0.3em;
     clear: both;
 }
 aside{
     width: 30%;
-    padding-top: 26px;
+    padding: 10px .8em 0;
 }
 #leftaside{
     float: left;
 }
 #rightaside{
     float: right;
-    padding-left: 5px;
 }
 section{
     width: 40%;
     float: left;
-    padding-top: 10px;
     padding-right: 5px;
 }
 
@@ -214,4 +213,47 @@ footer p{
     font-weight: bold;
     text-align: center;
     font-variant: small-caps;
+}
+
+/* Hide the mobile menu */ 
+#mobilemenu{
+    display: none;
+}
+
+/* Media Queries*/
+@media only screen and (max-width: 900px) {
+    body{
+      box-shadow: none;
+      font-size: 90%;
+    }
+  }
+
+@media only screen and (max-width: 767px){
+    #nav_menu{
+        display: none;
+    }
+    #mobilemenu{
+        display: block;
+    }
+    .slicknav_menu{
+        background-color: steelblue !important;
+    }
+    header h2{
+        font-size: 200%;
+    }
+    section, aside{
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0.5em;
+    }
+    #logoimage{
+        float: none;
+        padding: 0.5em;
+        display: block;
+        margin: 0 auto;
+    }
+    header h2, header h3{
+        text-align: center;
+    }
 }
